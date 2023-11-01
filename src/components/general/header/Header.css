@@ -1,0 +1,51 @@
+.header-div {
+  background-color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 1;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-container {
+  flex: 1;
+}
+
+.logo img {
+  width: 100%;
+  max-width: 250px;
+}
+
+.button-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header-button {
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 4px;
+  border: none;
+  border-radius: 4px;
+  background-color: inherit;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.header-button:hover {
+  background-color: #e5e7eb;
+}
+
+.sun-icon {
+  height: 24px;
+  margin-right: 8px;
+}

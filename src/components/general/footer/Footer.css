@@ -1,0 +1,45 @@
+/* Footer.css */
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .col-md-3 {
+    width: 25%;
+  }
+  
+  h4 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #666;
+  }
+  
+  a:hover {
+    color: #000;
+  }
+  

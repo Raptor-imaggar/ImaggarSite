@@ -1,8 +1,9 @@
+// Header.js
 import React, { useState, useEffect } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi'; // Import the menu icon
 import menuTranslations from '../../../data/menu';
 import Logo from './Asset 2.png';
-import { AiOutlineMenu } from 'react-icons/ai';
-import './Header.css'; // Import your CSS file here
+import './Header.css';
 
 const Header = () => {
   const [announcementClosed, setAnnouncementClosed] = useState(false);
@@ -39,7 +40,7 @@ const Header = () => {
       <div className="header-container">
         <div className="logo-container">
           <h1 className="logo">
-            <img src={Logo} alt="logo"  />
+            <img src={Logo} alt="logo" />
           </h1>
         </div>
         <div className="button-container">
@@ -48,8 +49,17 @@ const Header = () => {
           <button className="header-button">Blog</button>
           <button className="header-button">Resume</button>
           <button className="header-button">Contact</button>
-         
         </div>
+        <div className="menu-icon" onClick={toggleMenu}>
+          <GiHamburgerMenu size={30} />
+        </div>
+      </div>
+      <div className={`mobile-menu ${showMenu ? 'active' : ''}`}>
+        <ul>
+          {menuItems.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );

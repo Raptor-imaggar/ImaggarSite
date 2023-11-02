@@ -1,51 +1,121 @@
+/* Header.css */
 .header-div {
-  background-color: #ffffff;
-  width: 100%;
-  padding: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  transition: background-color 0.3s ease;
   position: fixed;
-  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-div.shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+
 }
 
 .header-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+  height: 40px;
 }
 
 .logo-container {
-  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-  width: 100%;
-  max-width: 250px;
+  width: 250px;
+  height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+  transform: scale(1.1);
 }
 
 .button-container {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  gap: 15px;
 }
 
 .header-button {
-  font-size: 14px;
-  padding: 8px 16px;
-  margin: 4px;
+  background-color: transparent;
   border: none;
-  border-radius: 4px;
-  background-color: inherit;
-  transition: background-color 0.3s ease;
+  font-size: 16px;
+  color: #333;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .header-button:hover {
-  background-color: #e5e7eb;
+  color: #007bff;
+  transform: scale(1.1);
 }
 
-.sun-icon {
-  height: 24px;
-  margin-right: 8px;
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #ffffff;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.mobile-menu.active li {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .button-container {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
 }

@@ -1,72 +1,237 @@
-// Service.js
-import React from 'react';
+import React, { useState } from 'react';
 import './Service.css';
+import Image from './image.png'; // Import the image
+import Serviceimage1 from '../../../Assect/WhatsApp.jpg';
 
 const Service = () => {
+  // State to track which service is currently selected
+  const [selectedService, setSelectedService] = useState('service1');
+
+  // Function to handle service selection
+  const handleServiceSelection = (service) => {
+    setSelectedService(service);
+  };
+
+  
+
   return (
-    <div className="row-fluid-wrapper row-depth-1 row-number-12 dnd-section dnd_area-row-5-padding">
-      <div className="row-fluid ">
-        <div className="span12 widget-span widget-type-cell dnd-column" style={{}} data-widget-type="cell" data-x="0" data-w="12">
-          <div className="row-fluid-wrapper row-depth-1 row-number-13 dnd-row">
-            <div className="row-fluid ">
-              <div className="span12 widget-span widget-type-custom_widget dnd-module" style={{}} data-widget-type="custom_widget" data-x="0" data-w="12">
-                <div id="hs_cos_wrapper_widget_1683111612492" className="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style={{}} data-hs-cos-general-type="widget" data-hs-cos-type="module">
-                  <div className="widget_1683111612492">
-                    <div className="headings">
-                      <h3>Haptik's Impact in Numbers</h3>
-                      <p className="sh-2">The tangible outcomes achieved by our clients</p>
-                    </div>
-                    <div className="cards-list flex">
-                      {/* Card 1 */}
-                      <a className="card anim-on" style={{ background: 'linear-gradient(122.93deg, #FFF4FB 4.59%, #FFFFFF 46.5%)' }} href="https://www.haptik.ai/resources/case-study/jio-mart">
-                        <div className="title-subtitle-wrap">
-                          <div className="title">
-                            68%
-                          </div>
-                          <h5 className="sub-title sh-2">
-                            repeat rate on WhatsApp commerce
-                          </h5>
-                        </div>
-                        <div className="image-wrap">
-                          <img src="https://www.haptik.ai/hs-fs/hubfs/JioMart_logo_200223.webp?width=1000&amp;height=500&amp;name=JioMart_logo_200223.webp" alt="JioMart_logo" loading="lazy" width="1000" height="500" style={{ maxWidth: '100%', height: 'auto' }} />
-                        </div>
+    <div className="center-container">
+      <div className="service-heading-container">
+        <div className="service-heading1">
+          <h4>heading1</h4>
+        </div>
+        <div className="service-heading2">
+          <h4>heading2</h4>
+        </div>
+      </div>
+      <div className="service-container topic1">
+        <div className="service-image">
+          <img src={Image} alt="Your Image" />
+        </div>
+        <div className="subservice-container">
+          <div className="subservice">
+            <div className="subservice-heading">
+              <div
+                className={`service-heading service1-heading ${
+                  selectedService === 'service1' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service1')}
+              >
+                service1
+              </div>
+              <div
+                className={`service-heading service2-heading ${
+                  selectedService === 'service2' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service2')}
+              >
+                service2
+              </div>
+              <div
+                className={`service-heading service3-heading ${
+                  selectedService === 'service3' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service3')}
+              >
+                service3
+              </div>
+              <div
+                className={`service-heading service4-heading ${
+                  selectedService === 'service4' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service4')}
+              >
+                service4
+              </div>
+            </div>
+            <div className="subservice-content">
+              <div className={`main-subservice ${selectedService}-main`}>
+                <div className="subservicemain-content">
+                  {selectedService === 'service1' && (
+                    <>
+                      <h3>Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
                       </a>
-                      {/* Card 2 */}
-                      <a className="card anim-on" style={{ background: 'linear-gradient(122.93deg, #FFF4FB 4.59%, #FFFFFF 46.5%)' }} href="https://www.haptik.ai/resources/case-study/jio-mart">
-                        <div className="title-subtitle-wrap">
-                          <div className="title">
-                            68%
-                          </div>
-                          <h5 className="sub-title sh-2">
-                            repeat rate on WhatsApp commerce
-                          </h5>
-                        </div>
-                        <div className="image-wrap">
-                          <img src="https://www.haptik.ai/hs-fs/hubfs/JioMart_logo_200223.webp?width=1000&amp;height=500&amp;name=JioMart_logo_200223.webp" alt="JioMart_logo" loading="lazy" width="1000" height="500" style={{ maxWidth: '100%', height: 'auto' }} />
-                        </div>
+                    </>
+                  )}
+                  {selectedService === 'service2' && (
+                    <>
+                      <h3>Service 2 - Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
                       </a>
-                      {/* Card 3 */}
-                      <a className="card anim-on" style={{ background: 'linear-gradient(122.93deg, #FFF4FB 4.59%, #FFFFFF 46.5%)' }} href="https://www.haptik.ai/resources/case-study/jio-mart">
-                        <div className="title-subtitle-wrap">
-                          <div className="title">
-                            68%
-                          </div>
-                          <h5 className="sub-title sh-2">
-                            repeat rate on WhatsApp commerce
-                          </h5>
-                        </div>
-                        <div className="image-wrap">
-                          <img src="https://www.haptik.ai/hs-fs/hubfs/JioMart_logo_200223.webp?width=1000&amp;height=500&amp;name=JioMart_logo_200223.webp" alt="JioMart_logo" loading="lazy" width="1000" height="500" style={{ maxWidth: '100%', height: 'auto' }} />
-                        </div>
+                    </>
+                  )}
+                  {selectedService === 'service3' && (
+                    <>
+                      <h3>Service 3 - Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
                       </a>
-                    </div>
-                  </div>
+                    </>
+                  )}
+                  {selectedService === 'service4' && (
+                    <>
+                      <h3>Service 4 - Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
+                      </a>
+                    </>
+                  )}
+                </div>
+                <div className="subservice-image">
+                  <img src={Serviceimage1} alt="Your Image" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      {/* <div className="service-container topic2">
+        <div className="service-image">
+          <img src={Image} alt="Your Image" />
+        </div>
+        <div className="subservice-container">
+          <div className="subservice">
+            <div className="subservice-heading">
+              <div
+                className={`service-heading service1-heading ${
+                  selectedService === 'service1' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service1')}
+              >
+                service1
+              </div>
+              <div
+                className={`service-heading service2-heading ${
+                  selectedService === 'service2' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service2')}
+              >
+                service2
+              </div>
+              <div
+                className={`service-heading service3-heading ${
+                  selectedService === 'service3' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service3')}
+              >
+                service3
+              </div>
+              <div
+                className={`service-heading service4-heading ${
+                  selectedService === 'service4' ? 'selected' : ''
+                }`}
+                onClick={() => handleServiceSelection('service4')}
+              >
+                service4
+              </div>
+            </div>
+            <div className="subservice-content">
+              <div className={`main-subservice ${selectedService}-main`}>
+                <div className="subservicemain-content">
+                  {selectedService === 'service1' && (
+                    <>
+                      <h3>Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
+                      </a>
+                    </>
+                  )}
+                  {selectedService === 'service2' && (
+                    <>
+                      <h3>Service 2 - Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
+                      </a>
+                    </>
+                  )}
+                  {selectedService === 'service3' && (
+                    <>
+                      <h3>Service 3 - Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
+                      </a>
+                    </>
+                  )}
+                  {selectedService === 'service4' && (
+                    <>
+                      <h3>Service 4 - Nurture Customers at Each Step</h3>
+                      <h6>
+                        Drive the desired action with click-worthy campaigns on
+                        WhatsApp. Trigger uninterrupted notifications at scale
+                        and boost ROI.
+                      </h6>
+                      <a>
+                        <h7>Explore interrakt</h7>
+                      </a>
+                    </>
+                  )}
+                </div>
+                <div className="subservice-image">
+                  <img src={Serviceimage1} alt="Your Image" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
     </div>
   );
 };

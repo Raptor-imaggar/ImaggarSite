@@ -7,7 +7,6 @@ import Footer from './components/general/footer';
 import { useState,useEffect } from 'react';
 import './App.css';
 import CustomCursor from './CustomCursor';
-import Chatbox from "./components/general/chatbot"
 
 const App = () => {
 
@@ -32,7 +31,6 @@ const App = () => {
       <div className="app">
         <Header />
         <AppRoutes />
-        <Chatbox />
         <Footer />
       </div>
      

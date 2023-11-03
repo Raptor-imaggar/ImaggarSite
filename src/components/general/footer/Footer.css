@@ -1,45 +1,95 @@
-/* Footer.css */
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
 
-.footer {
-    background-color: #f8f9fa;
-    padding: 40px 0;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .col-md-3 {
-    width: 25%;
-  }
-  
-  h4 {
-    color: #333;
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #666;
-  }
-  
-  a:hover {
-    color: #000;
-  }
-  
+.footer-links-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-address-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-products,
+.footer-address,
+.footer-subscribe {
+  margin: 0 20px;
+}
+
+.footer-products h4,
+.footer-address h4,
+.footer-subscribe h4 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.footer-address p {
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.footer-social-media {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer-social-media a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #555;
+}
+
+.footer-subscribe form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer-subscribe input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.footer-subscribe button {
+  padding: 8px 20px;
+  background-color: #E4DCFD;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-subscribe button:hover {
+  background-color: #b59efa;
+}
+
+.footer-copyright {
+  width: 100%;
+  height: 100px;
+  color: #555;
+  padding: 20px 0;
+  background-color: #b59efa;
+  text-align: center;
+}

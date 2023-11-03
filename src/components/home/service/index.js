@@ -43,7 +43,7 @@ const Service = () => {
                 <div className="subservice">
                   <div className="subservice-heading">
                     {topics.map((topic) => (
-                      <>
+                    
                      
                       <div
                         key={topic.id}
@@ -51,7 +51,7 @@ const Service = () => {
                         onClick={() => handleServiceSelection(topic.id)}
                       >
                         {topic.title}
-                      </div></>
+                      </div>
                     ))}
                   </div>
                   <div className="subservice-content">

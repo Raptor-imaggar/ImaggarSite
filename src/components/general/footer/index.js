@@ -3,29 +3,46 @@ import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-3">
-            <h4>Platform</h4>
-            <ul>
-              <li><a href="#">WhatsApp Notifications</a></li>
-              <li><a href="#">Advanced NLU</a></li>
-              <li><a href="#">Intent Discovery</a></li>
-              <li><a href="#">Conversation Studio</a></li>
-              <li><a href="#">Campaign Bots</a></li>
-              <li><a href="#">Agent Assist</a></li>
-              <li><a href="#">Intelligent Analytics</a></li>
-              <li><a href="#">Linguist Pro</a></li>
-              <li><a href="#">Enterprise Security</a></li>
-              <li><a href="#">Integration Ecosystem</a></li>
-            </ul>
-          </div>
-          {/* Add similar styling for other columns */}
-          {/* ... */}
+    <>
+    <div className="footer-container">
+      <div className="footer-links-container">
+        <div className="footer-links">
+          <a href="/">Products</a>
+          <a href="/">Contacts</a>
+          <a href="/">Subscribe</a>
         </div>
       </div>
-    </footer>
+      <div className="footer-address-container">
+        <div className="footer-products">
+          <h4>Products</h4>
+          <ul>
+            <li>Product 1</li>
+            <li>Product 2</li>
+            <li>Product 3</li>
+          </ul>
+        </div>
+        <div className="footer-address">
+          <h4>Address</h4>
+          <p>1234 Main St, City, State</p>
+          <div className="footer-social-media">
+            <a href="/">Instagram</a>
+            <a href="/">LinkedIn</a>
+            <a href="/">Facebook</a>
+            <a href="/">Telegram Bot</a>
+            <a href="/">WhatsApp Bot</a>
+          </div>
+        </div>
+        <div className="footer-subscribe">
+          <h4>Subscribe</h4>
+          <form>
+            <input type="email" placeholder="Enter your email" />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      </div>
+      <div className="footer-copyright">copyrights belongs © 2023 Imaggar technologies</div>
+      </>
   );
 };
 

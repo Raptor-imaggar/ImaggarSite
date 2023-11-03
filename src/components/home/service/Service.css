@@ -32,13 +32,10 @@
   flex: 1;
   text-align: center;
   border-radius: 40px;
-  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-   /* Change the background color when selected */
- 
+  background-color: transparent;
+  z-index: 1;
 }
-
-
 
 .service-image {
   display: flex;
@@ -51,13 +48,10 @@
 }
 
 .service-image img {
-  max-width: 70%;
+  max-width: 100%;
   max-height: 80%;
   border-radius: 20px;
 }
-
-/* Service.css */
-/* ... Your existing styles ... */
 
 .subservice-container {
   display: flex;
@@ -85,46 +79,48 @@
   overflow: hidden;
 }
 
-/* Define the default style for topic-inactive */
 .topic-inactive {
-  background-color: #f0f0f0; /* Set the background color for inactive divs */
-  color: #333; /* Set the text color for inactive divs */
+  background-color: transparent;
+  color: #333;
+  transition: background-color 0.3s;
 }
 
-/* Define the style for topic-active */
+.topic-inactive:hover {
+  background-image: linear-gradient(90deg, #2aca6d63 0%, #ffffff 100%);
+  color: #000000;
+}
+
 .topic-active {
-  background-color: #007bff; /* Set the background color for active divs */
-  color: #fff; /* Set the text color for active divs */
+  background: linear-gradient(90deg, #2aa2ca 0%, #ffffff 100%);
+  color: #000000;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .subservice {
-  width: 90%; /* Adjust the width as needed */
+  width: 90%;
   height: 100%;
   border-radius: 20px;
   box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: transparent; /* Set your background color */
+  background-color: transparent;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Space between heading and content */
-
-  /* You can adjust the shadow properties like blur, spread, and color to your liking */
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 .subservice-heading {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px; /* Add padding as needed */
-  
-  margin: 5px; /* Adjust margin as needed */
-
-  /* You can adjust the shadow properties like blur, spread, and color to your liking */
+  padding: 10px;
+  margin: 5px;
 }
 
 .subservice-heading div {
-  flex: 1; /* Distribute available space equally */
-  text-align: center; /* Center the text horizontally */
+  flex: 1;
+  text-align: center;
   cursor: pointer;
+  border-bottom: 2px solid #38d9e4a6;
 }
 
 .main-subservice {
@@ -134,46 +130,79 @@
 }
 
 .subservicemain-content {
-  width: 70%; /* Adjust the width as needed */
-  padding: 10px; /* Add padding as needed */
-   /* Add a 3D shadow effect to the content */
-  margin: 10px; /* Adjust margin as needed */
+  width: 70%;
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 40px;
 }
 
 .subservice-image {
-  width: 300px; /* Adjust the width as needed */
+  width: 400px;
   margin: 10px;
   height: 300px;
-  margin-right: 50px; /* Adjust margin as needed */
+  margin-right: 50px;
 }
 
 .subservice-image img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: 20px; /* Add rounded corners to the image */
+  border-radius: 20px;
 }
 
-
 .subservicemain-content h3 {
-  font-size: 25px; /* Adjust the font size for the heading as needed */
-  color: #0074D9; /* Change the color for the heading text */
+  font-size: 25px;
+  color: #0074D9;
 }
 
 .subservicemain-content h6 {
-  font-size: 15px; /* Adjust the font size for the paragraph as needed */
-  color: #555; /* Change the color for the paragraph text */
+  font-size: 15px;
+  color: #555;
 }
 
 .subservicemain-content a {
-   /* Remove underlines from links */
-  color: #02ff74; /* Change the color for the link text */
+  color: #02ff74;
   font-size: 15px;
 }
 
 .service-heading.selected {
   cursor: pointer;
-  background-color: #0074D9; /* Change the background color when selected */
-  color: #fff; /* Change the text color when selected */
-  
+  color: #000000;
+  padding: 5px;
+  border-bottom: 5px solid #38d8e4;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 
+.service-topic1,
+.service-topic2 {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.service-topic1.slide-in,
+.service-topic2.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.service-container .main-subservice {
+  animation: slideIn 0.3s ease-in forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

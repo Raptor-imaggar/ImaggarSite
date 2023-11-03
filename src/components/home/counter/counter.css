@@ -1,0 +1,72 @@
+/* Default styles for larger screens */
+.counter-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 100px;
+  }
+  
+  .counter-item {
+    text-align: center;
+    flex: 1;
+  }
+  
+  .counter-number {
+    font-size: 60px;
+    font-weight: bold;
+    color: #006DEE;
+    font-family: "Proxima Nova", sans-serif;
+  }
+  
+  .counter-text {
+    font-size: 22px;
+    margin-top: 5px;
+  }
+  
+  /* Vertical line style */
+  .counter-item:not(:last-child) {
+    border-right: 0.5px solid #1f888356;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .counter-container {
+      width: 100%;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+  
+    .counter-item {
+      flex: 1 0 100%;
+      border-right: none;
+      margin-bottom: 10px;
+    }
+  
+    .counter-number {
+      font-size: 36px;
+    }
+  
+    .counter-text {
+      font-size: 18px;
+    }
+  }
+  
+  /* Animation class */
+  @keyframes count-up {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animated-counter-number {
+    animation: count-up 2s ease-out;
+  }
+  

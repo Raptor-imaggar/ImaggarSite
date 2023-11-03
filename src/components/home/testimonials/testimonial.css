@@ -1,0 +1,83 @@
+/* CSS for Testimonial Component */
+.testimonial {
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 30px;
+    width: 280px;
+    /* Adjust the width as needed */
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:  0 0 5px 1px lightgrey;
+}
+
+.testimonial-logo img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0 auto;
+    
+}
+
+.testimonial-content {
+    font-size: 16px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.testimonial-line {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+.testimonial-person {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    
+}
+
+.person-info {
+    display: flex;
+    align-items: center;
+    /* Center picture vertically */
+}
+
+.person-pic {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.person-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: -10px;
+}
+
+.person-position {
+    font-size: 14px;
+}
+
+.person-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+
+  }
+  
+
+
+/* CSS for Testimonials Component */
+.slick-slider {
+    width: 100%;
+    max-width: 1200px;
+    /* Adjust the max-width as needed */
+    margin: 0 auto;
+    position: relative;
+}

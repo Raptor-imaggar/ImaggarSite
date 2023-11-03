@@ -56,7 +56,7 @@ html {
 
 body {
   font-family: "__Inter_8d54fb,__Inter_Fallback_8d54fb", sans-serif;
-  background: linear-gradient(90deg, #E4DCFD 0%, #ffffff 100%);
+  background: linear-gradient(90deg, #f6f3ff 0%, #ffffff 100%);
   position: relative;
   cursor: none;
 }

@@ -9,6 +9,65 @@
 .service-container {
   width: 80%;
   height: 550px;
+  background-color: #f8f8f8;
+  border-radius: 40px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  margin-top: -30px;
+  overflow: hidden;
+}
+
+.service-heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  height: 70px;
+  background-color: #f8f8f8;
+  border-radius: 40px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.service-heading1,
+.service-heading2 {
+  flex: 1;
+  text-align: center;
+  border-radius: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.service-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.service-image img {
+  max-width: 100%;
+  max-height: 80%;
+  border-radius: 20px;
+}
+
+.subservice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+}
+
+
+/* Rest of the CSS remains unchanged */
+
+.service-container {
+  width: 80%;
+  height: 550px;
   background-color: #fff;
   border-radius: 40px;
   box-shadow:  0 0 10px 1px lightgrey;
@@ -86,12 +145,12 @@
 }
 
 .topic-inactive:hover {
-  background-image: linear-gradient(90deg, #2aca6d63 0%, #ffffff 100%);
+  background-image: linear-gradient(90deg, #E4DCFD 0%, #ffffff 100%);
   color: #000000;
 }
 
 .topic-active {
-  background: linear-gradient(90deg, #2aa2ca 0%, #ffffff 100%);
+  background: linear-gradient(90deg, #E4DCFD 0%, #ffffff 100%);
   color: #000000;
   box-shadow:  0 0 10px 1px lightgrey;
 }
@@ -120,7 +179,7 @@
   flex: 1;
   text-align: center;
   cursor: pointer;
-  border-bottom: 2px solid #38d9e4a6;
+  border-bottom: 1px solid #E4DCFD;
 }
 
 .main-subservice {
@@ -160,7 +219,7 @@
 }
 
 .subservicemain-content a {
-  color: #02ff74;
+  color: #E4DCFD;
   font-size: 15px;
 }
 
@@ -168,7 +227,7 @@
   cursor: pointer;
   color: #000000;
   padding: 5px;
-  border-bottom: 5px solid #38d8e4;
+  border-bottom: 5px solid #E4DCFD;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }

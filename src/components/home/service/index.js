@@ -36,9 +36,7 @@ const Service = () => {
         <div className="service-container">
           {(showTopic1 || !showTopic1) && (
             <div className={`service-topic${showTopic1 ? '1' : '2'} ${showTopic1 || !showTopic1 ? 'slide-in' : ''}`}>
-              <div className="service-image">
-                <img src={showTopic1 ? Image : Serviceimage1} alt="Your Image" />
-              </div>
+              
               <div className="subservice-container">
                 <div className="subservice">
                   <div className="subservice-heading">

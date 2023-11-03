@@ -2,7 +2,8 @@ import React from 'react';
 import Landing from '../../components/home/landing';
 import Client from '../../components/home/client/client';
 import Service from '../../components/home/service';
-import Testimonial from '../../components/home/testimonials';
+import Counter from '../../components/home/testimonials';
+import Testimonial from '../../components/home/counter';
 function Home() {
   return (
     <div>
@@ -10,6 +11,7 @@ function Home() {
        <Client /> 
         <Service /> 
         <Testimonial />
+        <Counter />
     </div>
   );
 }

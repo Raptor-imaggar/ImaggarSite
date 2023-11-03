@@ -2,11 +2,16 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './testimonial.css'
+import './testimonial.css';
+import testimonialData from '../../../data/testimonialData.json';
 
-const Testimonial = ({ logo, content, personPic, personName, personPosition }) => {
+const Testimonial = ({ logo, content, personPic, personName, personPosition, customColor }) => {
+  const testimonialStyle = {
+    backgroundColor: customColor,
+  };
+
   return (
-    <div className="testimonial">
+    <div className="testimonial" style={testimonialStyle}>
       <div className="testimonial-logo">
         <img src={logo} alt="Company Logo" />
       </div>
@@ -22,7 +27,6 @@ const Testimonial = ({ logo, content, personPic, personName, personPosition }) =
             <p className="person-position">{personPosition}</p>
           </div>
         </div>
-       
       </div>
     </div>
   );
@@ -33,19 +37,21 @@ const Testimonials = () => {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 3, // Show 2 testimonials on mobile screens
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768, // Adjust as needed
+        breakpoint: 768,
         settings: {
-          slidesToShow: 2, // Number of testimonials shown on smaller screens
+          slidesToShow: 2, // Show 3 testimonials on tablets
         },
       },
       {
-        breakpoint: 480, // Adjust as needed
+        breakpoint: 480,
         settings: {
-          slidesToShow: 1, // Number of testimonials shown on even smaller screens
+          slidesToShow: 1, // Show 1 testimonial on smaller screens
         },
       },
     ],
@@ -53,49 +59,9 @@ const Testimonials = () => {
 
   return (
     <Slider {...settings}>
-      <Testimonial
-        logo="logo1.png"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        personPic="person1.jpg"
-        personName="John Doe"
-        personPosition="CEO"
-      />
-      <Testimonial
-        logo="logo2.png"
-        content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-        personPic="person2.jpg"
-        personName="Jane Smith"
-        personPosition="Manager"
-      />
-      <Testimonial
-        logo="logo3.png"
-        content="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
-        personPic="person3.jpg"
-        personName="Bob Johnson"
-        personPosition="CFO"
-      />
-       <Testimonial
-        logo="logo1.png"
-        content="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        personPic="person1.jpg"
-        personName="John Doe"
-        personPosition="CEO"
-      />
-      <Testimonial
-        logo="logo2.png"
-        content="Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
-        personPic="person2.jpg"
-        personName="Jane Smith"
-        personPosition="Manager"
-      />
-      <Testimonial
-        logo="logo3.png"
-        content="Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore."
-        personPic="person3.jpg"
-        personName="Bob Johnson"
-        personPosition="CFO"
-      />
-     
+      {testimonialData.map((testimonial, index) => (
+        <Testimonial key={index} {...testimonial} />
+      ))}
     </Slider>
   );
 };

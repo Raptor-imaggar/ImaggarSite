@@ -1,0 +1,50 @@
+[
+    {
+      "logo": "logo1.png",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "personPic": "person1.jpg",
+      "personName": "John Doe",
+      "personPosition": "CEO",
+      "customColor": "#FFDDC1"
+    },
+    {
+      "logo": "logo2.png",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "personPic": "person2.jpg",
+      "personName": "Jane Smith",
+      "personPosition": "Manager",
+      "customColor": "#C1FFD6"
+    },
+    {
+      "logo": "logo3.png",
+      "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "personPic": "person3.jpg",
+      "personName": "Bob Johnson",
+      "personPosition": "CFO",
+      "customColor": "#C1A2FF"
+    },
+    {
+      "logo": "logo4.png",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "personPic": "person4.jpg",
+      "personName": "Alice Johnson",
+      "personPosition": "CTO",
+      "customColor": "#FFD6C1"
+    },
+    {
+      "logo": "logo5.png",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "personPic": "person5.jpg",
+      "personName": "Ella Smith",
+      "personPosition": "Manager",
+      "customColor": "#C1FFC1"
+    },
+    {
+      "logo": "logo6.png",
+      "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.",
+      "personPic": "person6.jpg",
+      "personName": "Charlie Doe",
+      "personPosition": "CFO",
+      "customColor": "#A2C1FF"
+    }
+  ]

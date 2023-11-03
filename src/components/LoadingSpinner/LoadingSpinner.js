@@ -1,10 +1,14 @@
 import React from 'react';
-import { InfinitySpin } from 'react-loader-spinner'; // Import the specific spinner type you want to use
-import './loding.css'
+import { InfinitySpin } from 'react-loader-spinner';
+import './loding.css'; // Import a separate CSS file for styling
+
 const Loading = () => {
   return (
     <div className="loading">
-      <InfinitySpin color="#007bff" height={200} width={200} />
+      <div className="loading-overlay"></div> {/* Overlay for the blur effect */}
+      <div className="loading-spinner">
+        <InfinitySpin color="#007bff" height={200} width={200} />
+      </div>
     </div>
   );
 };

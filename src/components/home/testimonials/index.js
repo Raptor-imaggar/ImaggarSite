@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './testimonial.css';
-import testimonialData from '../../../data/testimonialData.json';
+import testimonialData from '../../../data/testimonialData';
 
 const Testimonial = ({ logo, content, personPic, personName, personPosition, customColor }) => {
   const testimonialStyle = {

@@ -64,10 +64,11 @@
   right: 20px;
   width: 60px;
   height: 60px;
-  background-color: transparent;
-  color: #fff;
+  
+  
   border: none;
-  border-radius: 50%;
+  background-color: transparent;
+  border-radius: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

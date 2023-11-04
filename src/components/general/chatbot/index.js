@@ -65,13 +65,13 @@ const Chatbox = () => {
           </button>
         </div>
       </div>
-
-      <img
-        className="bottom-right-button"
+    <button className="bottom-right-button">     <img
+        style={{"height" : "80px"}}
         src={Logo}
         alt="Jones"
         onClick={toggleChatbox}
-      />
+      /></button>
+ 
     </div>
   );
 };

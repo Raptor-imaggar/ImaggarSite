@@ -43,15 +43,27 @@ const Testimonials = () => {
     autoplaySpeed: 3000,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1200, // Large desktops and smaller
         settings: {
-          slidesToShow: 2, // Show 3 testimonials on tablets
+          slidesToShow: 3, // Show 3 testimonials
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 992, // Desktops and smaller
         settings: {
-          slidesToShow: 1, // Show 1 testimonial on smaller screens
+          slidesToShow: 2, // Show 2 testimonials
+        },
+      },
+      {
+        breakpoint: 768, // Tablets and smaller
+        settings: {
+          slidesToShow: 1, // Show 1 testimonial
+        },
+      },
+      {
+        breakpoint: 480, // Mobile devices
+        settings: {
+          slidesToShow: 1, // Show 1 testimonial
         },
       },
     ],

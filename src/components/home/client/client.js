@@ -29,7 +29,54 @@ const ClientSlider = () => {
     cssEase: 'linear', // For smooth continuous movement
     pauseOnHover: false,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2, // Number of slides to show on screens smaller than 768px
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2, // Number of slides to show on screens between 768px and 1024px
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          slidesToShow: 3, // Number of slides to show on screens between 1024px and 1280px
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1440,
+        settings: {
+          slidesToShow: 4, // Number of slides to show on screens between 1280px and 1440px
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5, // Number of slides to show on screens between 1440px and 1600px
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 1920,
+        settings: {
+          slidesToShow: 6, // Number of slides to show on screens between 1600px and 1920px
+          slidesToScroll: 1,
+        },
+      },
+      // You can add more breakpoints and settings as needed
+    ],
   };
+
+
 
   return (
 

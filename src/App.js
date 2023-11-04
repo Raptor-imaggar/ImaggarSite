@@ -28,7 +28,7 @@ const App = () => {
     // Simulate loading for a few seconds
     setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // Adjust the time as needed
+    }, 3000); // Adjust the time as needed
   }, []);
 
   return (

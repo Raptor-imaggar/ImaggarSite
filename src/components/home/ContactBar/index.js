@@ -9,7 +9,7 @@ const ContactBar = () => {
         <p>Shape the New Era of Customer Service with Generative AI</p>
       </div>
       <div className="sub-div right-div">
-        <button>Get A Demo</button>
+        <button className='getademo-button'>Get A Demo</button>
       </div>
     </div>
     </div>

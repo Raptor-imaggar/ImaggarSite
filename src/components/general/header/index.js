@@ -1,6 +1,7 @@
-// Header.js
 import React, { useState, useEffect } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi'; // Import the menu icon
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { TbSpeakerphone } from 'react-icons/tb';
 import menuTranslations from '../../../data/menu';
 import Logo from './Asset 2.png';
 import './Header.css';
@@ -9,9 +10,15 @@ const Header = () => {
   const [announcementClosed, setAnnouncementClosed] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [notification, setNotification] = useState({
+    message: 'This is your default notification message.',
+    visible: true,
+  });
 
   const handleAnnouncementClose = () => {
-    setAnnouncementClosed(true);
+    setNotification({ ...notification, visible: false });
+    // Move the header-div to the top
+    document.querySelector('.header-div').style.top = '0';
   };
 
   const { menu } = menuTranslations;
@@ -37,6 +44,17 @@ const Header = () => {
 
   return (
     <div className={`header-div ${scrolled ? 'shadow' : ''}`}>
+      {notification.visible && (
+        <div className={`notification-bar ${notification.visible ? 'active' : ''}`}>
+          <span className={`notification-message ${notification.visible ? 'visible' : ''}`}>
+            <TbSpeakerphone className="phone-icon"/> {notification.message}
+          </span>
+          <button className='notification-close-button' onClick={handleAnnouncementClose}>
+            <AiOutlineCloseCircle size={20} />
+          </button>
+        </div>
+      )}
+
       <div className="header-container">
         <div className="logo-container">
           <h1 className="logo">

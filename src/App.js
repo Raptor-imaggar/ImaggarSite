@@ -5,7 +5,8 @@ import Header from './components/general/header';
 import Footer from './components/general/footer';
 import CustomCursor from './CustomCursor';
 import Chatbox from './components/general/chatbot';
-import Loading from './components/LoadingSpinner/LoadingSpinner'; // Import the Loading component
+import Loading from './components/LoadingSpinner/LoadingSpinner'; 
+// Import the Loading component
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true); // State variable to control loading screen

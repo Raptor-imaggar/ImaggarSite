@@ -38,7 +38,7 @@ const App = () => {
         <Header />
         <AppRoutes />
         <Chatbox />
-        <Footer />
+        {/* <Footer /> */}
       </div>
       {isLoading && <Loading />} {/* Display Loading component when isLoading is true */}
     </Router>

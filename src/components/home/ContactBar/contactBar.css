@@ -1,0 +1,110 @@
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-family: 'Proxima Nova', sans-serif;
+  }
+  
+  .contact-bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #006dee;
+    padding: 10px;
+    width: 100%;
+    border-radius: 24px;
+    align-items: center;
+    box-shadow: -4px 4px 25px 0px rgba(0, 0, 0, 0.075);
+    transition: all 0.3s;
+  }
+  
+  .contact-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: -1;
+    border-radius: inherit;
+    animation: shade 0.3s ease-in-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes shade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .contact-bar:hover {
+    transform: scale(1.05);
+    box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .sub-div {
+    padding: 10px;
+    text-align: center;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #f7f7f7;
+  }
+  
+  .left-div,
+  .right-div {
+    flex: 1;
+    margin: 10px 0;
+  }
+  
+  button {
+    padding: 12px 35px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #006dee;
+    border: none;
+    cursor: pointer;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 18px;
+    box-shadow: -4px 4px 25px 0px rgba(255, 255, 255, 0.075);
+    transition: all 0.3s;
+  }
+  
+  button:hover {
+    background-color: #007bff;
+    color: #fff;
+    box-shadow: -4px 4px 35px 0px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05); /* Add scaling effect on hover */
+  }
+  
+  @media (min-width: 768px) {
+    .contact-bar {
+      width: 75%;
+      flex-direction: row;
+      height: 180px;
+      justify-content: space-between;
+    }
+  
+    .sub-div {
+      font-size: 35px;
+    }
+  
+    .left-div {
+      flex: 7;
+    }
+  
+    .right-div {
+      flex: 3;
+      margin: 0 10px;
+    }
+  
+    button {
+      font-size: 18px;
+    }
+  }
+  

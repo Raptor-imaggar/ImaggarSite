@@ -1,92 +1,297 @@
 /* Contact.css */
 
 .contact-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin-top: 50px;
-  }
-  
-  .contact-container {
-    width: 80%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .contact-content {
-    width: 60%;
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-  }
-  
-  .contact-content h2 {
-    font-size: 34px;
-    margin: 0;
-  }
-  
-  .contact-content h4 {
-    font-size: 18px;
-    margin: 10px 0;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    margin: 10px 0;
-  }
-  
-  .logo-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  /* Add styles for your logo images here */
-  
-  .contact-form {
-    width: 40%;
-    padding: 40px 52px;
-   
-    box-shadow: -4px 4px 25px 0px #00000013;
-    background-color: #edf4ff;
-    border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 50px;
+}
 
+.contact-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-content {
+  width: 60%;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.contact-content h2 {
+  font-size: 42px;
+  margin: 0;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: bold;
+}
+
+.contact-content h4 {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.highlight-text {
+  color: #007bff; /* Change the color as needed */
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+/* Updated styles for bullet points and bold text */
+.bullet-point {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.logo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Add styles for your logo images here */
+
+.contact-form {
+  width: 40%;
+  padding: 40px 52px;
+  box-shadow: -4px 4px 25px 0px #00000013;
+  background-color: #edf4ff;
+  border-radius: 25px;
+}
+
+.contact-form h2 {
+  font-size: 24px;
+  text-align: center;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: bold;
+}
+
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc !important; 
+  border-radius: 5px;
+  transition: border-color 1s;
+}
+
+.contact-input:focus {
+  border: 1px solid #007bff  !important; /* Change the entire border when focused */
+}
+.contact-input::placeholder {
+  opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+.Nameinput::placeholder {
+  opacity: 0.7; /* Adjust the opacity as needed */
+}
+
+
+.Nameinput{
+  width: 45%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.LastName{
+  margin-left: 30px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.country-select {
+  width: 30%; 
+  /* Adjust the width as needed */
+}
+
+/* Contact.css */
+
+/* ... (other styles) ... */
+
+/* Style the dropdown container */
+.country-select__control {
+  width: 30%; /* Adjust the width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Style the dropdown options */
+.country-select__menu {
+  width: 30%; /* Adjust the width as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Style the selected value */
+.country-select__single-value {
+  color: #333;
+}
+
+/* Style the selected option */
+.country-select__option--is-selected {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Style the hover state of the options */
+.country-select__option:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* ... (other styles) ... */
+
+
+.phone-input {
+  width: 65%; /* Adjust the width as needed */
+}
+.contact-submit-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s; /* Add a smooth transition effect */
+
+  /* Optional: Add a box shadow for a lift effect on hover */
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.contact-submit-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+}
+
+
+/* Contact.css */
+
+/* ... Other styles ... */
+
+
+
+.bullet-icon {
+  margin-bottom: 5px;
+  margin-right: 10px;
+  font-size: 20px; /* Adjust the size as needed */
+  color: #007bff; /* Icon color */
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 18px; /* Adjust the size as needed */
+}
+
+.description {
+  font-size: 16px; /* Adjust the size as needed */
+}
+
+/* ... Other styles ... */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack the contact-content and contact-form vertically */
   }
-  
-  .contact-form h2 {
-    font-size: 24px;
-    margin: 0;
+
+  .contact-content {
+    width: 100%; /* Full width */
   }
-  
+
+  .contact-form {
+    width: 100%; /* Full width */
+  }
+
+  .country-select {
+    width: 100%; /* Full width */
+  }
+
+  .phone-input {
+    width: 100%; /* Full width */
+  }
+}
+
+/* Contact.css */
+
+/* ... (other styles) ... */
+
+/* Add a media query for screens with a maximum width of 768px (adjust as needed) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; /* Stack the contact-content and contact-form vertically */
+  }
+
+  .contact-content {
+    width: 100%; /* Full width */
+  }
+
+  .contact-form {
+    width: 100%; /* Full width */
+    padding: 20px; /* Increase padding for better spacing on smaller screens */
+  }
+
+  .contact-content h2 {
+    font-size: 24px; /* Adjust font size for smaller screens */
+  }
+
+  .contact-content h4 {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .country-select {
+    width: 100%; /* Full width */
+  }
+
+  .phone-input {
+    width: 100%; /* Full width */
+  }
+
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduce margin between form groups for better spacing */
   }
-  
- 
-  
-  .contact-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+
+  .contact-input{
+    width: 100%; /* Full width */
   }
-  
+  .Nameinput,
+  .LastName {
+    width: 44%;
+  }
   .contact-submit-button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Add margin for spacing between the form and the button */
   }
-  
-  .contact-submit-button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+/* ... (other styles) ... */

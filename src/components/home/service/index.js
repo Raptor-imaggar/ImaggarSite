@@ -26,7 +26,8 @@ const Service = () => {
           
             <div
               key={topic.id}
-              className={`service-heading${index + 1} topic${index + 1}-service ${showTopic1 && index === 0 ? 'topic-active' : 'topic-inactive'}`}
+              className={`service-heading${index + 1} topic${index + 1}-service ${index === (showTopic1 ? 0 : 1) ? 'topic-active' : 'topic-inactive'}`}
+
               onClick={() => toggleTopic(index + 1 )}
             >
               <h4>{topic}</h4>

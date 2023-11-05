@@ -32,3 +32,33 @@
     height: auto;
   }
   
+  /* For screens with a maximum width of 768px (typical mobile devices) */
+@media (max-width: 768px) {
+  .row-fluid {
+    flex-direction: column;
+    padding: 5%;
+    margin-top: 120px;
+  }
+
+  .col {
+    flex: none;
+  }
+
+  .text-col {
+    padding: 10px;
+  }
+
+  .text-col h1 {
+    font-size: 24px;
+  }
+
+  .text-col p {
+    font-size: 14px;
+  }
+
+  .image-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

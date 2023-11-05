@@ -204,8 +204,8 @@
 @media (max-width: 768px) {
   .notification-bar {
     padding: 5px 0;
-    
-    height: 15px;
+    width: 100%;
+    /* height: 20px; */
    
   }
 

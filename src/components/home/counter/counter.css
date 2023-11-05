@@ -6,7 +6,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    margin-top: 80px;
   }
   
   .counter-item {
@@ -37,6 +38,9 @@
       width: 100%;
       padding: 10px;
       flex-wrap: wrap;
+      margin-bottom: 20px;
+      margin-top: 10px;
+      margin-top: -40px;
     }
   
     .counter-item {
@@ -46,7 +50,7 @@
     }
   
     .counter-number {
-      font-size: 36px;
+      font-size: 46px;
     }
   
     .counter-text {
@@ -54,6 +58,31 @@
     }
   }
   
+  /* Media Query for screens with a maximum width of 480px */
+@media (max-width: 480px) {
+  .counter-container {
+    width: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    margin-top: -100px;
+  }
+
+  .counter-item {
+    flex: 1 0 100%;
+    border-right: none;
+    margin-bottom: 10px;
+  }
+
+  .counter-number {
+    font-size: 40px; /* Adjust font size for very small screens */
+  }
+
+  .counter-text {
+    font-size: 28px; /* Adjust font size for very small screens */
+  }
+}
+
   /* Animation class */
   @keyframes count-up {
     0% {

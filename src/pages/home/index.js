@@ -12,9 +12,10 @@ function Home() {
        <Client /> 
         <Service /> 
         <Counter />
-        <ContactBar />
+       
 
         <Testimonial />
+        <ContactBar />
     </div>
   );
 }

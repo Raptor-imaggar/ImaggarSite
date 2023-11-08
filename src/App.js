@@ -35,7 +35,7 @@ const App = () => {
   return (
     <Router>
       <CustomCursor />
-      <h1>jones</h1>
+    
       <div className="app">
       <NotificationBar />
         <Header />

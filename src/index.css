@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive !important;
+  
   background: linear-gradient(90deg, #f6f3ff 0%, #ffffff 100%);
   position: relative;
   cursor: none;

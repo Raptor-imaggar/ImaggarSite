@@ -7,8 +7,8 @@ import Counter from '../../components/home/counter';
 import ContactBar from '../../components/home/ContactBar';
 function Home() {
   return (
-    <div>
-      <Landing />
+    <div className='skeleton-wrapper'>
+      <Landing className='skeleton' />
        <Client /> 
         <Service /> 
         <Counter />
@@ -21,3 +21,4 @@ function Home() {
 }
 
 export default Home;
+

@@ -70,11 +70,14 @@ const Testimonials = () => {
   };
 
   return (
+    <div className='testimonials-container '>
+    <h1 style={{"alignItems":'center'}}>Testimonials</h1>
+    <h6>How our Clients Felt !</h6>
     <Slider {...settings}>
       {testimonialData.map((testimonial, index) => (
         <Testimonial key={index} {...testimonial} />
       ))}
-    </Slider>
+    </Slider></div>
   );
 };
 

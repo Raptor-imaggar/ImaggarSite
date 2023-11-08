@@ -6,7 +6,7 @@ import Footer from './components/general/footer';
 import CustomCursor from './CustomCursor';
 import Chatbox from './components/general/chatbot';
 import Loading from './components/LoadingSpinner/LoadingSpinner'; 
-// Import the Loading component
+import NotificationBar from './components/general/NotificationBar/index.js';
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true); // State variable to control loading screen
@@ -34,12 +34,14 @@ const App = () => {
 
   return (
     <Router>
-      <CustomCursor> </CustomCursor>
+      <CustomCursor />
+      <h1>jones</h1>
       <div className="app">
+      <NotificationBar />
         <Header />
         <AppRoutes />
-        <Chatbox />
-        {/* <Footer /> */}
+        {/* <Chatbox /> */}
+        <Footer />
       </div>
       {isLoading && <Loading />} {/* Display Loading component when isLoading is true */}
     </Router>

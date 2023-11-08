@@ -1,29 +1,35 @@
+// Header.js
 import React, { useState, useEffect } from 'react';
-import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { TbSpeakerphone } from 'react-icons/tb';
-import menuTranslations from '../../../data/menu';
+import { GiHamburgerMenu } from 'react-icons/gi'; // Import the menu icon
+import headerMenu from '../../../data/menu'; // Import the header menu data
 import Logo from './Asset 2.png';
+import Logo2 from './Asset 4.png';
+import { useMediaQuery } from '@mui/material';
+
 import './Header.css';
 
+
 const Header = () => {
+  const [showMenuBar, setShowMenuBar] = useState(false);
+
   const [announcementClosed, setAnnouncementClosed] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [notification, setNotification] = useState({
-    message: 'This is your default notification message.',
-    visible: true,
-  });
+  const isMobileView = useMediaQuery('(max-width:600px)');
 
   const handleAnnouncementClose = () => {
-    setNotification({ ...notification, visible: false });
-    // Move the header-div to the top
-    document.querySelector('.header-div').style.top = '0';
+    setAnnouncementClosed(true);
   };
 
-  const { menu } = menuTranslations;
-  const { english, tamil } = menu;
-  const menuItems = Object.keys(english);
+  const toggleMenuBar = () => {
+    setShowMenuBar(!showMenu);
+  };
+
+  const closeMenuBar = () => {
+    setShowMenu(false);
+  };
+
+  const menuItems = headerMenu.map((item) => item.name.en); // Extract menu items from the headerMenu data
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -44,40 +50,32 @@ const Header = () => {
 
   return (
     <div className={`header-div ${scrolled ? 'shadow' : ''}`}>
-      {notification.visible && (
-        <div className={`notification-bar ${notification.visible ? 'active' : ''}`}>
-          <span className={`notification-message ${notification.visible ? 'visible' : ''}`}>
-            <TbSpeakerphone className="phone-icon"/> {notification.message}
-          </span>
-          <button className='notification-close-button' onClick={handleAnnouncementClose}>
-            <AiOutlineCloseCircle size={20} />
-          </button>
-        </div>
-      )}
-
       <div className="header-container">
         <div className="logo-container">
           <h1 className="logo">
-            <img src={Logo} alt="logo" />
+          <img src={isMobileView ? Logo2 : Logo} alt="logo" />
           </h1>
         </div>
         <div className="button-container">
-          <button className="header-button">Work</button>
-          <button className="header-button">About</button>
-          <button className="header-button">Blog</button>
-          <button className="header-button">Resume</button>
-          <button className="header-button">Contact</button>
+          {headerMenu.map((item, index) => (
+           <a  href={item.url}> <button key={index} className="header-button">
+              {item.name.en}
+            </button></a>
+          ))}
         </div>
+      
         <div className="menu-icon" onClick={toggleMenu}>
           <GiHamburgerMenu size={30} />
         </div>
       </div>
       <div className={`mobile-menu ${showMenu ? 'active' : ''}`}>
+      <button className="close-button" onClick={closeMenuBar}>X</button>
         <ul>
           {menuItems.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
+   
       </div>
     </div>
   );

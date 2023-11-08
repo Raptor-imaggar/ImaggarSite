@@ -1,23 +1,26 @@
 import React from 'react';
+import landingContent from '../../../data/landingPage';
 import "./Landing.css";
 
 const Landing = () => {
+  const { title, spanText, paragraph, buttonText, imageUrl, imageAlt, demoLink } = landingContent;
+
   return (
     <div className="row-fluid">
       <div className="col">
-        <div className="text-col">
-          <h1>Build Lasting Customer Relationships Using <span>Generative AI</span></h1>
-          <p>Power up <i>support</i> by unifying cross-channel customer conversations, enable <i>marketing</i> to engage in personalized interactions, and ignite <i>sales</i> for higher conversions.</p>
+        <div className="text-col ">
+          <h1>{title} <span>{spanText}</span></h1>
+          <p>{paragraph}</p>
           <div className="buttons-row">
-            <a className="button section-link" href="https://www.haptik.ai/request-demo">
-              Get A Demo
+            <a className="button section-link" href={demoLink}>
+              {buttonText}
             </a>
           </div>
         </div>
       </div>
       <div className="col">
         <div className="image-col">
-          <img src="https://www.haptik.ai/hs-fs/hubfs/Homepage_main-5-10-23.webp?width=4608&height=3771&name=Homepage_main-5-10-23.webp" alt="Homepage_main-5-10-23" />
+          <img src={imageUrl} alt={imageAlt} />
         </div>
       </div>
     </div>

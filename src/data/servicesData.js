@@ -1,73 +1,75 @@
 
-
 const servicesData = {
-  topics: [
+  topics:[
     {
-      topicName: "services",
-      subtopics: [
-        {
-          id: "service1",
-          title: "Service 1 ",
-          description:
-            "Drive the desired action with click-worthy campaigns on WhatsApp. Trigger uninterrupted notifications at scale and boost ROI.",
-          image: "../../../Assect/WhatsApp.jpg",
-        },
-        {
-          id: "service2",
-          title: "Service 2 ",
-          description:
-            "Drive the desired action with click-worthy campaigns on WhatsApp. Trigger uninterrupted notifications at scale and boost ROI.",
-          image: "../../../Assect/WhatsApp.jpg",
-        },
-        {
-          id: "service3",
-          title: "Service 3 ",
-          description:
-            "Drive the desired action with click-worthy campaigns on WhatsApp. Trigger uninterrupted notifications at scale and boost ROI.",
-          image: "../../../Assect/WhatsApp.jpg",
-        },
-        {
-          id: "service4",
-          title: "Service 4 ",
-          description:
-            "Drive the desired action with click-worthy campaigns on WhatsApp. Trigger uninterrupted notifications at scale and boost ROI.",
-          image: "../../../Assect/WhatsApp.jpg",
-        },
-      ],
-    } ,
-    {
-      topicName: "products",
-      subtopics: [
-        {
-          id: "service1",
-          title: "Product 1",
-          description:
-            "Utilize our cutting-edge tools to streamline your workflow and boost productivity. Experience seamless integration and user-friendly interfaces.",
-          image: "../../../Assect/Tools.jpg",
-        },
-        {
-          id: "service2",
-          title: "Product 2",
-          description:
-            "Deliver a tailored user experience with our personalized solutions. Elevate customer satisfaction and engagement through dynamic interfaces.",
-          image: "../../../Assect/UserExperience.jpg",
-        },
-        {
-          id: "service3",
-          title: "Product 3",
-          description:
-            "Leverage data-driven insights to optimize your sales strategies. Maximize revenue and identify key growth opportunities with our advanced analytics.",
-          image: "../../../Assect/DataAnalytics.jpg",
-        },
-        {
-          id: "service4",
-          title: "Product 4",
-          description:
-            "Ensure the security of your data with our robust solutions. Protect sensitive information and prevent unauthorized access with our cutting-edge technology.",
-          image: "../../../Assect/DataSecurity.jpg",
-        },
-      ],
-    },
+        topicName: "Services",
+        subtopics: [
+          {
+            id: "1",
+            title: "App and Software Development",
+            description:
+              "Create user-friendly and efficient applications and software solutions tailored to your specific business needs.",
+            image: "../../../Assect/development.jpg",
+          },
+          {
+            id: "2",
+            title: "Branding",
+            description:
+              "Build a strong brand identity that resonates with your target audience and establishes your unique value proposition.",
+            image: "../../../Assect/branding.jpg",
+          },
+          {
+            id: "3",
+            title: "Social Media Marketing",
+            description:
+              "Harness the power of social media to increase brand awareness, drive engagement, and expand your customer base.",
+            image: "../../../Assect/social-media.jpg",
+          },
+          {
+            id: "4",
+            title: "Business Operations",
+            description:
+              "Optimize your business operations for enhanced efficiency, productivity, and overall performance.",
+            image: "../../../Assect/business-operations.jpg",
+          },
+        ],
+      } ,      
+ {
+        topicName: "Products",
+        subtopics: [
+          {
+            id: "1",
+            title: "Conversational AI and Chatbots",
+            description:
+              "Enhance customer interactions with AI-powered chatbots that provide seamless and personalized communication, improving user engagement and satisfaction.",
+            image: "../../../Assect/ConversationalAI.jpg",
+          },
+          {
+            id: "2",
+            title: "CMS",
+            description:
+              "Efficiently manage and publish your digital content with a powerful Content Management System (CMS), enabling streamlined content creation and distribution.",
+            image: "../../../Assect/CMS.jpg",
+          },
+          {
+            id: "3",
+            title: "CRM",
+            description:
+              "Optimize customer relationships and manage interactions effectively with a Customer Relationship Management (CRM) system designed to enhance customer satisfaction and loyalty.",
+            image: "../../../Assect/CRM.jpg",
+          },
+          {
+            id: "4",
+            title: "ERP",
+            description:
+              "Integrate and streamline your business processes with an Enterprise Resource Planning (ERP) system, ensuring efficient resource management and improved overall productivity.",
+            image: "../../../Assect/ERP.jpg",
+          },
+        ],
+      }
+      
+     
+      
   ],
 };
 

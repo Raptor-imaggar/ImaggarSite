@@ -1,5 +1,4 @@
 /* LoadingPage.css */
-/* LoadingPage.css */
 .loading-page {
   position: fixed;
   top: 0;
@@ -9,11 +8,9 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  background: white;
-  
+  background: #a48cf46c;
   z-index: 9999;
 }
-
 
 .pl {
   display: block;
@@ -23,14 +20,12 @@
 
 .pl__ring,
 .pl__ball {
-  animation: ring 2s ease-out infinite;
+  animation: ring 1s ease-out infinite;
 }
 
 .pl__ball {
   animation-name: ball;
 }
-
-
 
 /* Animation */
 @keyframes ring {
@@ -49,7 +44,6 @@
 }
 
 @keyframes ball {
-
   from,
   50% {
     animation-timing-function: ease-in;
@@ -80,4 +74,3 @@
     stroke-dashoffset: -163;
   }
 }
-

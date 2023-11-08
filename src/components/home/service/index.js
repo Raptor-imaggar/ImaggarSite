@@ -5,7 +5,7 @@ import Serviceimage1 from '../../../Assect/WhatsApp.jpg';
 import servicesData from '../../../data/servicesData';
 
 const Service = () => {
-  const [selectedService, setSelectedService] = useState('service1');
+  const [selectedService, setSelectedService] = useState('1');
   const [showTopic1, setShowTopic1] = useState(true);
 
   const handleServiceSelection = (service) => {
@@ -37,13 +37,9 @@ const Service = () => {
         <div className="service-container">
           {(showTopic1 || !showTopic1) && (
             <div className={`service-topic${showTopic1 ? '1' : '2'} ${showTopic1 || !showTopic1 ? 'slide-in' : ''}`}>
-              
-              <div className="subservice-container">
-                <div className="subservice">
-                  <div className="subservice-heading">
+              <div className="subservice-container"> 
+              <div className="subservice-heading">
                     {topics.map((topic) => (
-                    
-                     
                       <div
                         key={topic.id}
                         className={`service-heading ${topic.id === selectedService ? 'selected' : ''}`}
@@ -53,6 +49,8 @@ const Service = () => {
                       </div>
                     ))}
                   </div>
+                <div className="subservice">
+                  
                   <div className="subservice-content">
                     {topics.map((topic) => (
                       selectedService === topic.id && (
@@ -60,9 +58,7 @@ const Service = () => {
                           <div className="subservicemain-content">
                             <h3>{topic.title}</h3>
                             <h6>{topic.description}</h6>
-                            <a>
-                              <h7>Explore interrakt</h7>
-                            </a>
+                            
                           </div>
                           <div className="subservice-image">
                             <img src={showTopic1 ? Image : Serviceimage1} alt="Your Image" />

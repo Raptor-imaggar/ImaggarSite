@@ -63,17 +63,17 @@ const Counter = () => {
       <div className="counter-container">
         <div className="counter-item">
           <div className={`counter-number ${isAnimated ? 'animated-counter-number' : ''}`}>{interactions >= targetInteractions ? targetInteractions : interactions}+</div>
-          <div className="counter-text">Interactions processed</div>
+          <div className="counter-text">Brands</div>
         </div>
 
         <div className="counter-item">
           <div className={`counter-number ${isAnimated ? 'animated-counter-number' : ''}`}>{transactions >= targetTransactions ? targetTransactions : transactions}+</div>
-          <div className="counter-text">Transactions processed</div>
+          <div className="counter-text">Tools</div>
         </div>
 
         <div className="counter-item">
           <div className={`counter-number ${isAnimated ? 'animated-counter-number' : ''}`}>{rating >= targetRating ? targetRating.toFixed(1) : rating.toFixed(1)}/5</div>
-          <div className="counter-text">Rating on G2</div>
+          <div className="counter-text">Ratings</div>
         </div>
 
         <div className="counter-item">

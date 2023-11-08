@@ -66,7 +66,7 @@ const Chatbox = () => {
         </div>
       </div>
     <button className="bottom-right-button">     <img
-        style={{"height" : "80px"}}
+        style={{"height" : "8    0px"}}
         src={Logo}
         alt="Jones"
         onClick={toggleChatbox}

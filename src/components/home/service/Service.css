@@ -4,20 +4,18 @@
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   margin-bottom: -100px;
 }
 
 .service-container {
+  padding: 10px;
   width: 80%;
-  height: 550px;
-  background-color: transparent;
+  height: 700px;
   border-radius: 40px;
-  /* box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1); */
   margin-top: -30px;
   overflow: hidden;
 }
-
-
 
 .service-heading-container {
   display: flex;
@@ -29,7 +27,6 @@
   border-radius: 40px;
   box-shadow: 0 0 10px 1px lightgrey;
   z-index: 1;
-  
 }
 
 .service-heading1,
@@ -39,16 +36,14 @@
   border-radius: 40px;
   padding: 10px;
   cursor: pointer;
-  background-color: transparent;
-  z-index: 1;
   height: 80%;
-  
-  
 }
-.service-heading2{
+
+.service-heading2 {
   margin-right: 10px;
 }
-.service-heading1{
+
+.service-heading1 {
   margin-left: 10px;
 }
 
@@ -57,7 +52,6 @@
   justify-content: center;
   align-items: center;
   height: 100px;
-  background-color: transparent;
   border-radius: 20px;
   margin-top: 30px;
 }
@@ -72,33 +66,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 95%;
   height: 80%;
   margin-top: 80px;
-}
-
-.service-topic1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.service-topic2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.topic-inactive {
-  background-color: transparent;
-  color: #333;
-  transition: background-color 0.3s;
 }
 
 .topic-inactive:hover {
@@ -113,11 +83,10 @@
 }
 
 .subservice {
-  width: 90%;
+  width: 100%;
   height: 100%;
   border-radius: 20px;
   box-shadow: 0 0 10px 1px lightgrey;
-  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -134,6 +103,7 @@
 
 .subservice-heading div {
   flex: 1;
+  height: max-content;
   text-align: center;
   cursor: pointer;
   border-bottom: 1px solid #E4DCFD;
@@ -143,41 +113,69 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.subservicemain-content {
-  width: 70%;
-  padding: 10px;
-  margin: 10px;
-  margin-bottom: 40px;
+.main-subservice .subservicemain-content {
+  flex: 1;
+  padding: 20px;
 }
 
-.subservice-image {
-  width: 400px;
-  margin: 10px;
-  height: 300px;
-  margin-right: 50px;
+.main-subservice .subservicemain-content h3 {
+  margin: 5px 0;
+  font-size: 24px;
 }
 
-.subservice-image img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 20px;
-}
-
-.subservicemain-content h3 {
-  font-size: 25px;
-  color: #0074D9;
-}
-
-.subservicemain-content h6 {
-  font-size: 15px;
+.main-subservice .subservicemain-content h6 {
+  margin: 10px 0;
+  font-size: 16px;
   color: #555;
 }
 
-.subservicemain-content a {
-  color: #E4DCFD;
-  font-size: 15px;
+.main-subservice .subservicemain-content a button {
+  display: flex;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #E4DCFD;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.main-subservice .subservicemain-content a button:hover {
+  background-color: #c0acff;
+}
+
+.subservice-image-container {
+  display: flex;
+  margin: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.subservice-image {
+  display: flex;
+  height: auto;
+  max-height: 300px;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.subservice-image img {
+  min-width: 100%;
+  min-height: 100%;
+  max-height: 500px;
+  max-width: 500px;
+  border-radius: 5px;
 }
 
 .service-heading.selected {
@@ -185,6 +183,7 @@
   color: #000000;
   padding: 5px;
   border-bottom: 5px solid #E4DCFD;
+  font: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -217,67 +216,108 @@
     transform: translateX(100%);
     opacity: 0;
   }
-
   to {
     transform: translateX(0);
     opacity: 1;
   }
 }
 
-
+/* Media Query for mobile view */
 @media (max-width: 768px) {
-  .center-container {
-    padding: 20px; /* Add padding for smaller screens */
-  }
-
-  .service-container {
-    width: 90%; /* Make it more responsive */
-    height: auto; /* Adjust the height */
-  }
-
   .service-heading-container {
-    width: 80%; /* Adjust the width */
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
   }
 
   .service-heading1,
   .service-heading2 {
-    font-size: 16px; /* Adjust the font size for smaller screens */
-    padding: 5px; /* Adjust padding */
+    flex: none;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 10px;
   }
 
-  /* Modify other styles as needed for smaller screens */
+  .service-heading-container .service-heading1,
+  .service-heading-container .service-heading2 {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .service-heading1.slide-out,
+  .service-heading2.slide-out {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 
 
-/* Media Query for very small screens (e.g., smartphones) */
-@media (max-width: 480px) {
+/* ... (your existing styles) */
+
+/* Media Query for mobile view */
+@media (max-width: 768px) {
   .center-container {
-    padding: 10px; /* Add padding for smaller screens */
+    margin: 0;
   }
 
   .service-container {
-    width: 95%; /* Make it more responsive for very small screens */
-    height: auto; /* Adjust the height */
+   
+    width: 95%;
+    height: 120px;
+    border-radius: 20px;
+    margin-top: 15px;
+    padding: 0px; /* Adjust padding for smaller screens */
   }
 
   .service-heading-container {
-    width: 90%; /* Adjust the width */
+ 
+     width: 100%;
+    height: 120px;
+    flex-direction: column;
   }
 
   .service-heading1,
   .service-heading2 {
-    font-size: 14px; /* Adjust the font size for very small screens */
-    padding: 5px; /* Adjust padding */
+    width: 100%;
+    height: auto; /* Adjust height for smaller screens */
+    margin-bottom: 10px;
   }
 
   .service-image {
-    margin-top: 10px; /* Adjust margin for smaller screens */
+    margin-top: 20px;
   }
 
-  .service-image img {
-    max-width: 100%;
-    max-height: 60%; /* Adjust image size for very small screens */
+  .subservice-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
   }
 
-  /* Modify other styles as needed for very small screens */
+  .service-heading.selected {
+    padding: 10px; /* Adjust padding for selected item */
+  }
+
+  .main-subservice {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .main-subservice .subservicemain-content h1 {
+    font-size: 24px; /* Adjust font size */
+  }
+
+  .main-subservice .subservicemain-content h3 {
+    font-size: 20px; /* Adjust font size */
+  }
+
+  .main-subservice .subservicemain-content h6 {
+    font-size: 14px; /* Adjust font size */
+  }
+
+  .main-subservice .subservicemain-content a button {
+    padding: 12px 24px; /* Adjust padding for buttons */
+    font-size: 16px; /* Adjust font size */
+  }
 }
+

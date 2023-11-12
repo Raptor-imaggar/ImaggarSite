@@ -11,7 +11,7 @@ html {
 
 body {
   font-family: 'Comfortaa', cursive !important;
-  
+  width: 100vw;
   background: linear-gradient(90deg, #f6f3ff 0%, #ffffff 100%);
   position: relative;
   cursor: none;

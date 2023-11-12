@@ -7,8 +7,8 @@ import Counter from '../../components/home/counter';
 import ContactBar from '../../components/home/ContactBar';
 function Home() {
   return (
-    <div className='skeleton-wrapper'>
-      <Landing className='skeleton' />
+    <div >
+      <Landing />
        <Client /> 
         <Service /> 
         <Counter />

@@ -1,95 +1,208 @@
-.footer-container {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+
+}
+
+.footer {
+  border-top: 1px solid #A58CF4;
+  box-shadow: #151515;
+  color: black;
+  padding: 80px 0;
+  box-shadow: #A58CF4;
+
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  border: 1px #A58CF4;
+}
+
+.row {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 20px 0;
+  flex-wrap: wrap;
 }
 
-.footer-links-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+ul {
+  list-style: none;
 }
 
-.footer-links {
-  display: flex;
+.footer-col {
+  width: 25%;
+  padding: 0 15px;
 }
 
-.footer-links a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: #333;
+.footer-col h4 {
+  font-size: 18px;
+  color: black;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
 }
 
-.footer-address-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
+.footer-col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #A58CF4;
+  width: 50px;
+  height: 2px;
 }
 
-.footer-products,
-.footer-address,
-.footer-subscribe {
-  margin: 0 20px;
-}
-
-.footer-products h4,
-.footer-address h4,
-.footer-subscribe h4 {
-  color: #333;
+.footer-col ul li:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.footer-address p {
-  color: #555;
-  margin-bottom: 5px;
-}
-
-.footer-social-media {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.footer-social-media a {
-  margin: 0 5px;
+.footer-col ul li a {
+  color: black;
+  display: block;
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: capitalize;
   text-decoration: none;
-  color: #555;
+  transition: all 0.3s ease;
 }
 
-.footer-subscribe form {
+.footer-col ul li a:hover {
+  color: #FFF;
+  padding-left: 7px;
+}
+
+.footer-col .social-links a {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 10px 10px 0;
+  line-height: 40px;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #151515;
+  background-color: #FFF;
+}
+
+@media(max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .footer-copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #A58CF4;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 574px) {
+  .footer-col {
+    width: 100%;
+  }
+}
+
+
+.footer-copyright {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #A58CF4;
+  color: #fff;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* Style for the new input field */
+.hs-email {
+  margin-bottom: 15px;
+}
+
+.hs-email label {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.hs-email input {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #A58CF4;
+  border-radius: 5px;
+}
+
+/* Style for the subscribe button */
+.hs_submit {
+  margin-top: 15px;
+}
+
+.hs-button {
+  background-color: #A58CF4;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hs-button:hover {
+  background-color: #7E5BEF;
+}
+/* Styles for the subscribe section */
+.subscribe {
   display: flex;
-  margin-top: 10px;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 25px;
+  padding-left: 0px;
 }
 
-.footer-subscribe input {
-  padding: 8px;
-  border: 1px solid #ccc;
+/* Style for the email input */
+.subscribe input[type='email'] {
+  width: 200px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #A58CF4;
   border-radius: 5px;
   margin-right: 10px;
 }
 
-.footer-subscribe button {
-  padding: 8px 20px;
-  background-color: #E4DCFD;
+/* Style for the subscribe button */
+.subscribe button {
+  background-color: #A58CF4;
+  color: #FFF;
+  padding: 10px 20px;
+  font-size: 16px;
   border: none;
   border-radius: 5px;
-  color: #fff;
   cursor: pointer;
 }
 
-.footer-subscribe button:hover {
-  background-color: #b59efa;
-}
-
-.footer-copyright {
-  width: 100%;
-  height: 100px;
-  color: #555;
-  padding: 20px 0;
-  background-color: #b59efa;
-  text-align: center;
+.subscribe button:hover {
+  background-color: #7E5BEF;
 }

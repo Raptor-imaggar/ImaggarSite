@@ -61,7 +61,7 @@
   /* Media Query for screens with a maximum width of 480px */
 @media (max-width: 480px) {
   .counter-container {
-    width: 100%;
+    width: 100vw;
     padding: 20px;
     flex-wrap: wrap;
     margin-bottom: 10px;

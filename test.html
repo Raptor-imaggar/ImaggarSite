@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Card Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha384-oC2HJ9EtC1hcxoYMjL8iZP3Rw5OEGG3GRiBz95eBo3ewbmQles1lP9qUv7fNfoY" crossorigin="anonymous">
+    <style>
+        /* Container styling */
+        .inner-tab {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Card styling */
+        .inner-content {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease-out;
+            margin-top: 10px;
+        }
+
+        .inner-content.active {
+            max-height: 500px; /* Set a suitable maximum height */
+        }
+
+        .left-col {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1em;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .link {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #arrow-icon {
+            margin-left: 5px;
+            transition: transform 0.3s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="inner-tab" id="inner-tabs-0" onclick="toggleCard(this)">
+        AI-Powered Web Q&amp;A
+        <div class="inner-content inner-tabs-0 effect">
+            <div class="left-col">
+                <h3>Build a Gen AI Assistant in No Time</h3>
+                <p>Offer hassle-free 24/7 support powered by Generative AI. Fetch website information based on customer queries &amp; generate dynamic responses with CRM &amp; Web API integration.</p>
+                <a href="https://www.haptik.ai/platform/generative-ai-faq-assistant" class="link" target="_blank" rel="noopener">
+                    Explore Gen AI Web Q&amp;A
+                    <i class="fas fa-arrow-right" id="arrow-icon"></i>
+                </a>
+            </div>
+            <div class="right-col">
+                <img src="https://www.haptik.ai/hs-fs/hubfs/AI-webQA-5-10.webp?width=2000&amp;name=AI-webQA-5-10.webp" alt="AI-webQA-5-10" loading="lazy" width="2000" style="max-width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCard(container) {
+            var card = container.querySelector('.inner-content'); // Get the inner content
+            var arrowIcon = container.querySelector('#arrow-icon'); // Get the arrow icon
+
+            if (card.classList.contains('active')) {
+                // Close the card
+                card.classList.remove('active');
+                arrowIcon.style.transform = 'rotate(0deg)';
+            } else {
+                // Open the card
+                card.classList.add('active');
+                arrowIcon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

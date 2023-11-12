@@ -1,0 +1,45 @@
+.slider-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .slide {
+    width: 100%;
+    display: none;
+    padding: 20px; /* Adjust the padding according to your design */
+    text-align: center;
+    -webkit-text-size-adjust: 100%;
+    --animate-duration: 1s;
+    --animate-delay: 1s;
+    --animate-repeat: 1;
+    word-break: break-word;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    box-sizing: border-box;
+  }
+  
+  .slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #000;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  

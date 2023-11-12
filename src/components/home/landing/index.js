@@ -7,6 +7,11 @@ const Landing = () => {
 
   return (
     <div className="row-fluid">
+     <div className="col">
+        <div className="image-col">
+          <img src={imageUrl} alt={imageAlt} />
+        </div>
+      </div> 
       <div className="col">
         <div className="text-col ">
           <h1>{title} <span>{spanText}</span></h1>
@@ -16,13 +21,19 @@ const Landing = () => {
               {buttonText}
             </a>
           </div>
+         
+<div className="second-row">
+  {landingContent.technologies.map((tech, index) => (
+    <div key={index} className="column">
+      <h2>{tech.techTitle}</h2>
+      <p>{tech.techDescription}</p>
+    </div>
+  ))}
+</div>
+
         </div>
       </div>
-      <div className="col">
-        <div className="image-col">
-          <img src={imageUrl} alt={imageAlt} />
-        </div>
-      </div>
+     
     </div>
   );
 };

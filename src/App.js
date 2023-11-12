@@ -37,13 +37,13 @@ const App = () => {
       <CustomCursor />
     
       <div className="app">
-      {/* <NotificationBar /> */}
+     
         <Header />
         <AppRoutes />
         {/* <Chatbox /> */}
         <Footer />  
       </div>
-      {/* {isLoading && <Loading />} Display Loading component when isLoading is true */}
+      {isLoading && <Loading />}
     </Router>
   );
 };

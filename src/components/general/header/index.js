@@ -64,21 +64,16 @@ const Header = () => {
       )}
 
       <div className="header-container">
-        <div className="logo-container">
-          <h1 className="logo">
-            <img src={isMobileView ? Logo2 : Logo} alt="logo" />
-          </h1>
-        </div>
-        <div className="button-container">
-          {menuItems.map((item, index) => (
-            <a key={index} href={item.url}>
-              <button className="header-button">{item}</button>
-            </a>
-          ))}
-        </div>
-        <div className="menu-icon" onClick={toggleMenu}>
-          <GiHamburgerMenu size={30} />
-        </div>
+  <div className="logo-container">
+    <h1 className="logo">
+      <img src={isMobileView ? Logo2 : Logo} alt="logo" />
+    </h1>
+  </div>
+
+  {isMobileView && (
+    <>
+      <div className="menu-icon" onClick={toggleMenu}>
+        <GiHamburgerMenu size={30} />
       </div>
 
       <div className={`mobile-menu ${showMenu && isMobileView ? 'active' : ''}`}>
@@ -87,10 +82,25 @@ const Header = () => {
         </button>
         <ul>
           {menuItems.map((item, index) => (
-            <li className="mobile-menu-list-down" key={index}>{item}</li>
+            <li className="mobile-menu-list-down" key={index}>
+              {item}
+            </li>
           ))}
         </ul>
       </div>
+    </>
+  )}
+
+  <div className="button-container">
+    {menuItems.map((item, index) => (
+      <a key={index} href={item.url}>
+        <button className="header-button">{item}</button>
+      </a>
+    ))}
+  </div>
+</div>
+
+    
     </div>
   );
 };

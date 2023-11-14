@@ -81,7 +81,7 @@ const ClientSlider = () => {
   return (
 
     <div className="client-slider">
-      <h2>Trusted by 500+ Leading Brands</h2>
+      <h2>Trusted by 10+ Leading Brands</h2>
       <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index}>

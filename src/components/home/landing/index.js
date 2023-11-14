@@ -22,14 +22,15 @@ const Landing = () => {
             </a>
           </div>
          
-<div className="second-row">
+          <div className="second-row">
   {landingContent.technologies.map((tech, index) => (
-    <div key={index} className="column">
+    <div key={index} className="card">
       <h2>{tech.techTitle}</h2>
       <p>{tech.techDescription}</p>
     </div>
   ))}
 </div>
+
 
         </div>
       </div>

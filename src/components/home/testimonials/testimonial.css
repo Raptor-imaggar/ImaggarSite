@@ -1,13 +1,17 @@
 /* CSS for Testimonial Component */
+
+.testimonials-container{
+    width: 100vw;
+}
 .testimonial {
     
     padding: 20px;
     text-align: center;
     /* background-color: #f9f9f9; */
     border-radius: 20px;
-    width: 280px;
     /* Adjust the width as needed */
-    height: 300px;
+    height: auto;
+    min-height: 400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -79,9 +83,36 @@
 .slick-slider {
     width: 100%;
     max-width: 1200px;
-    /* Adjust the max-width as needed */
+
     margin: 0 auto;
     position: relative;
 }
 
 
+/* Mobile-first approach - Adjust styles for mobile devices */
+@media (max-width: 768px) {
+    .testimonials-container{
+        width: 90% !important;
+    }
+    .testimonial {
+        width: 90%; 
+        height: fit-content;
+        min-height: 400px;
+        margin-bottom: 50px;/* Adjust width for mobile devices */
+    }
+
+    .testimonial-logo img {
+        max-width: 100%; /* Allow logo image to adjust within its container */
+        max-height: auto;
+    }
+    
+    .testimonial-person {
+        flex-direction: column; /* Stack person info vertically on mobile */
+        align-items: center; /* Center align person info on mobile */
+    }
+
+    .person-details {
+        margin-left: 0; /* Reset margin for mobile */
+        text-align: center; /* Center align person details on mobile */
+    }
+}

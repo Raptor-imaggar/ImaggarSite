@@ -4,7 +4,7 @@
 
 .app {
   text-align: center;
-  
+  overflow-x: hidden !important; 
   font-family: 'Comfortaa', cursive !important;
   background-color: #282c34;
   
@@ -21,7 +21,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-x: hidden !important; 
     }}
 .App-header {
   background-color: #282c34;

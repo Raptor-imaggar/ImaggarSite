@@ -4,11 +4,21 @@ import {
   MDBCol,
   MDBInput,
   MDBCheckbox,
-  MDBBtn,
+  MDBBtn
 } from 'mdb-react-ui-kit';
 import './internship.css';
 
 export default function App() {
+  const handleFileInputChange = (event) => {
+    const fileName = event.target.files[0]?.name;
+    const fileInput = document.getElementById('resumeInput');
+
+    // Set the title attribute to display the full file name on hover
+    if (fileName) {
+      fileInput.setAttribute('title', fileName);
+    }
+  };
+
   return (
     <div className='internshipform_main'>
       <form className='internshipform'>
@@ -25,7 +35,6 @@ export default function App() {
         <MDBInput wrapperClass='mb-4' id='form6Example4' label='Address' />
         <MDBInput wrapperClass='mb-4' type='email' id='form6Example5' label='Email' />
         <MDBInput wrapperClass='mb-4' type='tel' id='form6Example6' label='Phone' />
-
         <div className='mb-4'>
           <label htmlFor='selectItem' className='form-label'>
             Select Item
@@ -41,8 +50,21 @@ export default function App() {
           <label htmlFor='resumeInput' className='form-label'>
             Browse Resume
           </label>
-          <input type='file' className='form-control' id='resumeInput' />
+          <input
+            type='file'
+            className='form-control file-input'
+            id='resumeInput'
+            onChange={handleFileInputChange}
+          />
         </div>
+
+        <MDBInput
+          wrapperClass='mb-4'
+          textarea
+          id='form6Example7'
+          rows={4}
+          label='Additional information'
+        />
 
         <MDBCheckbox
           wrapperClass='d-flex justify-content-center mb-4'

@@ -4,6 +4,7 @@ import { Route, Routes as RouterRoutes } from 'react-router-dom';
 import Home from '../pages/home';
 import Contact from '../pages/GetAdemo/';
 import Login from '../pages/login';
+import Internship from '../pages/internship';
 
 const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ const AppRoutes = () => {
       <Route path="/services" element={<Contact />} />
       <Route path="/products" element={<Contact />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/internship" element={<Internship />} />
       <Route exact path="*" element={<Home />} />
     </RouterRoutes>
   );

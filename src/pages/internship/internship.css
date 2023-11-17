@@ -1,0 +1,12 @@
+.internshipform_main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.internshipform {
+
+    margin: 50px;
+    margin-top: 150px;
+}

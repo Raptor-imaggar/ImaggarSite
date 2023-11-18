@@ -5,7 +5,8 @@
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  margin-bottom: -100px;
+  margin-bottom: -50px;
+  margin-top: 50px;
 }
 
 .service-container {
@@ -155,7 +156,7 @@
   margin: 20px;
 }
 
-.column {
+.service-tem-column {
   flex: 1;
 }
 

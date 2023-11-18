@@ -1,0 +1,191 @@
+.mobile-service-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.mobile-service-heading-container {
+    order: 1;
+    width: 500px;
+    height: 70px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 1px lightgrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  
+
+.mobile-service-heading {
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+    flex: 1;
+    text-align: center;
+    border-radius: 40px;
+    padding: 10px;
+    cursor: pointer;
+    height: 80%;
+    transition: background-image 0.3s; /* Add transition for smooth color change */
+
+    /* Default background color */
+    background-image: linear-gradient(90deg, transparent 0%, transparent 100%);
+
+    /* Add the selected style */
+    &.selected {
+        background-image: linear-gradient(90deg, #E4DCFD 0%, #ffffff 100%);
+        color: #000000;
+        box-shadow: 0 0 10px 1px lightgrey;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}
+
+.mobile-service-heading:hover {
+    background-image: linear-gradient(90deg, #E4DCFD 0%, #ffffff 100%);
+    color: #000000;
+}
+.collapsible-container {
+    order: 2;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+}
+
+.Collapsible {
+    width: 100%; /* Ensure the Collapsible takes the full width of its container */
+    display: flex;
+    flex-direction: column; /* Change to column direction to stack trigger and content */
+    align-items: center;
+     /* Center content horizontally within the Collapsible */
+}
+
+.Collapsible__trigger {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+    padding: 15px 10px; /* Adjust padding */
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px; /* Increase margin for all triggers */
+    box-shadow: 0 0 10px 1px lightgrey;
+}
+
+.Collapsible__trigger:hover {
+    background-image: linear-gradient(90deg, #E4DCFD 0%, #ffffff 100%);
+    color: #000000;
+}
+
+/* Add this CSS to your existing styles */
+/* Add this CSS to your existing styles */
+.collapsible-trigger.selected {
+    background-image: linear-gradient(90deg, #E4DCFD 10%, #ffffff 90%); /* Adjust the percentage values as needed */
+    color: #000000;
+    border-radius: 30px; /* You can adjust the value as needed */
+}
+
+
+
+.Collapsible__contentInner {
+    text-align: center;
+    padding: 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 1px lightgrey;
+    margin: 20px;
+    max-width: 500px;
+}
+
+.collapsible-icon{
+    margin-left: 15px;
+}
+
+.mobile-service-content {
+    flex: 1;
+}
+
+.mobile-service-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.mobile-service-subtitle {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.mobile-service-description {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.mobile-service-link {
+    text-decoration: none;
+}
+
+.mobile-service-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.mobile-service-image {
+    margin-top: 20px;
+}
+
+/* Add this CSS to your existing styles */
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .mobile-service-container {
+        margin-bottom: 30px;
+    }
+
+    .mobile-service-heading-container {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .mobile-service-heading {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        font-size: 16px;
+        margin-right: 0;
+        margin-left: 0;
+        border-radius: 20px;
+        transition: background-image 0.3s;
+    }
+
+    .collapsible-container {
+        margin-top: 15px;
+    }
+
+    .Collapsible__trigger {
+        width: 100%;
+        padding: 15px;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .Collapsible__contentInner {
+        margin: 10px;
+    }
+
+    .collapsible-trigger.selected {
+        border-radius: 25px;
+    }
+}

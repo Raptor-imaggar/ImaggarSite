@@ -68,8 +68,8 @@ const Service = () => {
                             </a>
                           </div>
                           <div className="subservice-image-container">
-                            <div className="column">{/* Insert other content in the first column if needed */}</div>
-                            <div className="column">
+                            <div className="service-tem-column">{/* Insert other content in the first column if needed */}</div>
+                            <div className="service-tem-column">
                               <div className="subservice-image">
                                 <img src={showTopic1 ? Image : Serviceimage1} alt="Your Image" />
                               </div>
